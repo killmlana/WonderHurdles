@@ -10,7 +10,7 @@
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Poppins", sans-serif;
+  --body-font: "Nimbus Sans";
   --h1-font-size: 2rem;
   --normal-font-size: 1rem;
   --small-font-size: .813rem;
@@ -33,7 +33,7 @@ html, body {
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url("https://telegra.ph/file/b0583c176e4466147473a.png");
+    background-image: url("/static/img/BackGrounds/background2.png");
     background-size:cover;
     background-position: center;
 
@@ -66,6 +66,7 @@ header {
 
   .logo{
     width: 10rem;
+    opacity: 0;
 }
 
 .GetHelp{
@@ -104,6 +105,7 @@ header {
   position: relative;
   display: grid;
   align-items: center;
+  margin-top: 6rem;
 }
 
 .login__bg {
@@ -122,7 +124,13 @@ header {
   padding: 2.5rem 1rem;
   color: var(--white-color);
   border-radius: 1rem;
+  box-shadow: 0.5rem 1.5rem 0.2rem 0.2rem #00000033;
   backdrop-filter: blur(16px);
+  transition: transform 1s ease; /* Apply transition to transform */
+}
+
+.login__form:hover {
+  transform: translateY(-0.4rem); /* Use transform instead of translate */
 }
 
 .login__title {
@@ -155,6 +163,7 @@ header {
   border: none;
   outline: none;
 }
+
 
 .login__input {
   width: 100%;
@@ -205,16 +214,24 @@ header {
   width: 100%;
   padding: 1rem;
   margin-bottom: 1rem;
-  background-color: var(--white-color);
+  background-color: transparent;
   border-radius: 4rem;
-  color: var(--black-color);
+  color: var(--white-color);
+  border-style: solid;
+  border-color: white;
   font-weight: 500;
+  transition: background-color 0.4s ease, color 0.4s ease;
   cursor: pointer;
 }
 
 .login__register {
   font-size: var(--small-font-size);
   text-align: center;
+}
+
+.login__button:hover {
+  background-color: white;
+  color: var(--black-color);
 }
 
 .login__register a {
