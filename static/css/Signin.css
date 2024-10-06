@@ -120,12 +120,12 @@ header {
   position: relative;
   margin-inline: 1.5rem;
   background-color: hsla(0, 0%, 100%, .01);
+  backdrop-filter: blur(16px);
   border: 2px solid hsla(0, 0%, 100%, .7);
   padding: 2.5rem 1rem;
   color: var(--white-color);
   border-radius: 1rem;
   box-shadow: 0.5rem 1.5rem 0.2rem 0.2rem #00000033;
-  backdrop-filter: blur(16px);
   transition: transform 1s ease; /* Apply transition to transform */
 }
 
