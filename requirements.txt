@@ -1,0 +1,7 @@
+flask
+flask-mail
+gunicorn
+jinja2
+pymongo
+python-dotenv
+werkzeug

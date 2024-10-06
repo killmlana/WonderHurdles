@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 2;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #f0f8ff;
+    overflow-x: hidden;
+}
+
+header {
+    background: #125348;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+.logo{
+    width: 10rem;
+}
+
+.GetHelp{
+    border: 0;
+    width: 8rem;
+    height: 3.0rem;
+    background-color: #FDC309;
+    border-radius: 1.25rem;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #5E4400;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  
+  
+  }
+  
+  /* Hover effect */
+  .GetHelp:hover {
+    background-color: wheat; /* Move the button up slightly on hover */
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.3); /* Increase shadow size on hover */
+  }
+  
+  /* Active effect */
+  .GetHelp:active {
+    transform: translateY(3px); /* Move the button down slightly when clicked */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* Decrease shadow size when clicked */
+  }
+
+
+section h2 {
+    color: #125348;
+    letter-spacing: 1px;
+}
+
+#about, #team {
+    background: #9FC9B5;
+    margin: 20px 10px;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-out;
+    visibility: hidden;
+}
+
+#about.visible, #team.visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.mission-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.mission-content img {
+    max-width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.mission-content img:hover {
+    transform: scale(1.05);
+}
+
+.mission-content div {
+    width: 50%;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.team-member {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px;
+    height: 300px;
+    text-align:center;
+    transform: scale(0.9);
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member:hover {
+    transform: scale(1);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.team-member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    margin-bottom: 10px;
+}
+
+footer {
+    font-size: 0.8em;
+    background: #125348;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 10px;
+}
+
+@media (max-width: 768px) {
+    .mission-content, .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mission-content img, .mission-content div {
+        width: 90%;
+    }
+
+    .team-member {
+        width: 80%;  /* Adjust width for smaller screens */
+    }
+}
+
+#thankYou {
+    background: #9FC9B5;
+    margin: 20px 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+#thankYou.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.thankYou-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.thankYou-content img {
+    max-width: 200px;
+    border-radius: 10%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    animation: fade-in-left 1s;
+}
+
+.thankYou-content > div {
+    flex: 1;
+    margin-left: 20px;
+    animation: fade-in-right 1s;
+}
+
+@keyframes fade-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#thankYou h2{
+    color: #125348;
+
+}
+
+.thankYou-content h3 {
+    color: #125348;
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .thankYou-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .thankYou-content > div {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+

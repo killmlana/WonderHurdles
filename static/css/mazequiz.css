@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap');
+
+html, body {
+    width: 100vw;
+    height: 100vh;  /* Consider changing or removing if content needs more space */
+    padding: 0;
+    margin: 0;
+    background-image: url("https://telegra.ph/file/b0583c176e4466147473a.png");
+    background-size: cover;
+    background-position: center;
+    overflow: auto;  /* Ensures scrollability */
+}

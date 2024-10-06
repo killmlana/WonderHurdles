@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("https://telegra.ph/file/b0583c176e4466147473a.png");
+    background-size:cover;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+#startMazeBtn {
+  background-color: transparent; /* Set the background color to transparent */
+  border: none; /* Remove border if not needed */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  cursor: pointer; /* Ensure cursor changes on hover */
+}
+
+
+.menu-icons{
+  height: 4rem;
+  margin: 0px 10px;
+}
+
+
+#view {
+    margin-top: 30px;
+}
+
+#mazeContainer {
+    top: 15px;
+    opacity: 0;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 10px;
+}
+#mazeContainer #mazeCanvas {
+    margin: 125px;
+    display: block;
+    border: solid 2px rgb(255, 255, 255);
+    height: 300px;
+}
+
+.GetHelp{
+  border: 0;
+  width: 8rem;
+  height: 3.0rem;
+
+  background-color: #FDC309;
+  border-radius: 1.25rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #5E4400;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+
+
+}
+
+/* Hover effect */
+.GetHelp:hover {
+  background-color: wheat; /* Move the button up slightly on hover */
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.3); /* Increase shadow size on hover */
+}
+
+/* Active effect */
+.GetHelp:active {
+  transform: translateY(3px); /* Move the button down slightly when clicked */
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* Decrease shadow size when clicked */
+}
+
+.canvas {
+  height: 450px;
+}
+
+
+.logo{
+    width: 10rem;
+}
+
+ header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px;
+  }
+/*  
+  .logo {
+    cursor: pointer;
+  }
+  
+  .nav__links a,
+  .cta,
+  .overlay__content a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #edf0f1;
+    text-decoration: none;
+  }
+  
+  .nav__links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav__links li {
+    padding: 0px 20px;
+  }
+  
+  .nav__links li a {
+    transition: color 0.3s ease 0s;
+  }
+  
+  .nav__links li a:hover {
+    color: #0088a9;
+  }
+  
+  .cta {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+  }
+  
+  .cta:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+  }
+  
+
+   */ 
+input, select {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.30);
+    height: 45px;
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    appearance: none;
+}
+input:hover, select:hover {
+	background-color: rgba(0, 0, 0, 0.70);
+}
+input:active, select:active {
+	background-color: black;
+}
+input:focus, select:focus {
+	outline: none;
+}
+.custom-select {
+	display: inline-block;
+}
+.custom-select select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: 125px center;
+}
+#Message-Container {
+    visibility: hidden;
+    color: white;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.30);
+    z-index: 1;
+}
+#Message-Container #message {
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+}
+#page {
+	text-align: center;
+	height: auto;
+	width: auto;
+	margin: auto;
+}
+#page #menu {
+    margin: -550px;
+    padding: 10px;
+    height: 65px;
+    box-sizing: border-box;
+    
+}
+#page #menu h1 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 3.2rem;
+}
+#page #view {
+    position: absolute;
+    top: 65px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+}
+.border {
+    border: 10px black solid;
+    border-radius: 10px;
+}
+
+#instructions {
+    margin-top: 520px;
+    color: white;
+}
+ 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) {
+	input, select {
+	    width: 120px;
+	}
+}

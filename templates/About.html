@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Right Quest - About Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/About.css') }}">
+    <link rel="icon" type="image/png" href="/static/img/Icons/care_9304360 (1).png">
+
+</head>
+<body>
+    <header>
+
+
+        <a class="logo" href="/"><img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="logo"></a>
+        <h1>About Us</h1>
+        <a class="cta" href="https://www.childlineindia.org/a/about/childline-india#:~:text=Call%201098%20%E2%80%93%20Any%20child%20or,2"> <!-- Add the URL here -->
+            <button class="GetHelp">Get Help 📞</button>
+        </a>
+    </header>
+    <section id="about">
+        <div class="mission-content">
+            <img src="/static/img/Children Empowement.jpg" alt="Empowering Children" class="fade-in">
+            <div>
+                <h2 class="slide-right">Our Mission</h2>
+                <p class="slide-right">We are dedicated to making learning about rights fun and engaging for children through interactive games, animated videos, and quizzes. Our goal is to empower children by educating them about their rights in a way that is accessible and enjoyable.</p>
+            </div>
+        </div>
+    </section>
+    <!-- <<section id="team">
+        <h2>Meet Our Team</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="/Images/jsmathur.jpg" alt="Team Member Name">
+                <h3>Dr. Jitendra Pratap Singh Mathur</h3>
+                <p> Project Supervisor</p>
+            </div>  -->
+            <!-- Repeat the above div block for each team member -->
+        </div>
+    </section>
+
+    <section id="thankYou">
+        <h2><b>Project Supervisor</b></h2>
+        <div class="thankYou-content">
+            <img src="/static/img/jsmathur.jpg" alt="Project Supervisor Name" class="fade-in-left">
+            <div class="fade-in-right">
+                <h3>Dr. Jitendra Pratap Singh Mathur</h3>
+                <p>Assistant Professor VIT,Bhopal</p>
+                <p>We would like to extend our heartfelt thanks to our project supervisor, Dr. Jitendra Pratap Singh Mathur for their invaluable guidance and dedication to making this project a success. Your leadership and commitment have been a driving force behind our achievements.</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Contact Us: r=RightsQuestVITB@gmail.com</p>
+    </footer>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    });
+
+    document.querySelectorAll('#about, #team').forEach(section => {
+        observer.observe(section);
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    });
+
+    document.querySelectorAll('#about, #team, #thankYou').forEach(section => {
+        observer.observe(section);
+    });
+});
+
+
+</script>
+</html>

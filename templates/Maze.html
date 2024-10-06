@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rights Quest</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/Maze.css') }}">
+  <link rel="icon" type="image/png" href="/static/img/Icons/care_9304360 (1).png">
+</head>
+<body>
+
+  <header>
+    <a class="logo" href="/"><img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="logo"></a>
+    <nav>
+        <!-- <ul class="nav__links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Partnership</a></li>
+        </ul> -->
+    </nav>
+    <a class="cta" href="https://www.childlineindia.org/a/about/childline-india#:~:text=Call%201098%20%E2%80%93%20Any%20child%20or,2"> <!-- Add the URL here -->
+      <button class="GetHelp">Get Help 📞</button>
+  </a>
+  
+</header>
+
+  <div id="page">
+
+    <div id="Message-Container">
+      <div id="message">
+        <h1>Congratulations!</h1>
+        <p>You are done.</p>
+        <p id="moves"></p>
+        <input id="okBtn" type="button" onclick="goToRight1()" value="Cool!" />
+<!--         <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="Cool!" /> -->
+      </div>
+    </div>
+
+    <br>
+
+    <div class="basecanvas">
+      <img class="canvas" src="{{ url_for('static', filename='img/Icons/canvas.png') }}">
+    </div>
+        
+    <!-- <div id="menu">
+
+      <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Reset" />
+    </div> -->
+
+    <div id="menu">
+      <button id="startMazeBtn" onclick="location.href='{{ url_for('home') }}'">
+        <img class="menu-icons" src="{{ url_for('static', filename='img/Icons/homeCompressed.png') }}" alt="Reset Image">
+      </button>
+
+      <button id="startMazeBtn" onclick="makeMaze()">
+        <img class="menu-icons" src="{{ url_for('static', filename='img/Icons/ResetCompressed.png') }}" alt="Reset Image">
+      </button>
+
+      <button id="startMazeBtn" onclick="location.href='{{ url_for('modules') }}'">
+        <img class="menu-icons" src="{{ url_for('static', filename='img/Icons/menuCompressed.png') }}" alt="Reset Image">
+      </button>
+    </div>
+    
+
+
+
+    <div id="view">
+      <div id="mazeContainer">
+        <canvas id="mazeCanvas" class="border" height="1100" width="1100"></canvas>
+      </div>
+    </div>
+
+    <!-- <p id="instructions">Use arrow keys to move the key to the house!</p> -->
+
+    </div>  
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+  
+  <script src="{{ url_for('static', filename='js/Maze.js') }}"></script>
+</body>
+</html>

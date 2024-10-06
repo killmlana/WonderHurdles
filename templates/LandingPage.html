@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rights Quest</title>
+    <link rel="stylesheet" href="/static/css/LandingPage.css">
+    <link rel="icon" type="image/png" href="/static/img/Icons/care_9304360 (1).png">
+</head>
+<body>
+
+    <header>
+        <a class="logo" href="/"><img class= "logo"src="/static/img/logo.png" alt="logo"></a>
+        <nav>
+                
+            <a href="{{ url_for('About') }}"><button>About</button></a>
+            <a href="{{ url_for('contact_us') }}"><button>Partnership</button>
+            <a href="{{ url_for('contact_us') }}"><button>Contact</button>
+        </nav>
+        <a class="cta" href="https://www.childlineindia.org/a/about/childline-india#:~:text=Call%201098%20%E2%80%93%20Any%20child%20or,2"> <!-- Add the URL here -->
+            <button class="GetHelp">Get Help 📞</button>
+        </a>
+        
+    </header>
+
+    <section>
+        <p>Rights <br> Quest</p>
+
+        <div class="buttons">
+            <a href="{{ url_for('signin') }}">
+                <button>Continue as Learner</button>
+            </a>
+            <a href="{{ url_for('contact_us') }}">
+            <button>Continue as Organization</button>
+            </a>
+        </div>
+
+    </section>
+
+
+
+    
+</body>
+</html>

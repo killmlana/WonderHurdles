@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rights Quest</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/right1.css') }}">
+    <link rel="icon" type="image/png" href="/static/img/Icons/care_9304360 (1).png">
+    
+</head>
+<body>
+
+    <header>
+        <a class="logo" href="/"><img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="logo"></a>
+
+        <a class="cta" href="https://www.childlineindia.org/a/about/childline-india#:~:text=Call%201098%20%E2%80%93%20Any%20child%20or,2"> <!-- Add the URL here -->
+            <button class="GetHelp">Get Help 📞</button>
+        </a>
+        
+    </header>
+
+    <div class="video">
+
+        <img src="{{ url_for('static', filename='img/Icons/canvas.png') }}" class="base-canvas">
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/mLxnxy_MjnY?si=DXJC_uyCKLXnjMLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="player"></iframe>
+        <a href="{{ url_for('maze_quiz') }}">
+            <button class="Video-continue">Continue</button>
+        </a>
+    </div>
+
+    
+    
+</body>
+</html>

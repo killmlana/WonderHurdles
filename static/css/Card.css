@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap');
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("https://telegra.ph/file/b0583c176e4466147473a.png");
+    background-size:cover;
+    background-position: center;
+    
+}
+
+header {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px;
+  }
+
+  .logo{
+    width: 10rem;
+}
+
+.GetHelp{
+    border: 0;
+    width: 8rem;
+    height: 3.0rem;
+
+    background-color: #FDC309;
+    border-radius: 1.25rem;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #5E4400;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  
+  
+  }
+  
+  /* Hover effect */
+  .GetHelp:hover {
+    background-color: wheat; /* Move the button up slightly on hover */
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.3); /* Increase shadow size on hover */
+  }
+  
+  /* Active effect */
+  .GetHelp:active {
+    transform: translateY(3px); /* Move the button down slightly when clicked */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* Decrease shadow size when clicked */
+  }
+
+#board {
+    height: 400px;
+    width: 475px;
+    display: flex;
+    
+    margin: 0 33vw;
+    flex-wrap: wrap;
+
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    
+    background-color: #B54D2F;
+    border: 10px solid rgb(114, 45, 7);
+}
+
+
+
+.card {
+    height: 120px;
+    width: 110px;
+    margin: 2.5px;
+}
+
+h2{
+    color: aliceblue;
+}
+
+.Video-continue{
+  border: 0;
+  width: 8rem;
+  height: 1.6rem;
+  background-color: #FDC309;
+  border-radius: 1.25rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #5E4400;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ;
+  margin-left: 1100px;
+}
+
+  /* Hover effect */
+  .Video-continue:hover {
+    background-color: wheat; /* Move the button up slightly on hover */
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.3); /* Increase shadow size on hover */
+  }
+  
+  /* Active effect */
+  .Video-continue:active {
+    transform: translateY(1px); /* Move the button down slightly when clicked */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* Decrease shadow size when clicked */
+  }
