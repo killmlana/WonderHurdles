@@ -2,6 +2,7 @@ const login_button = document.getElementById('login_button');
 
 login_button.addEventListener('click', () => {
     login_button.disabled = true;
+    login_button.innerHTML = '<div class="spinner"></div>';
 
     const email_input = document.getElementById('email_input');
     const password_input = document.getElementById('password_input');
@@ -35,7 +36,8 @@ login_button.addEventListener('click', () => {
         localStorage.setItem('token', token);
 
         // Use this token to authenticate subsequent requests
-        alert('Login successful!');
+        login_button.innerHTML = 'Login';
+        login_button.disabled = false;
         // Redirect to another page or update UI after successful login
         window.location.href = '/modules';
     })
@@ -43,6 +45,7 @@ login_button.addEventListener('click', () => {
         alert(error.message); // Alert with the error message
         email_input.value = '';
         password_input.value = '';
+        login_button.innerHTML = 'Login';
         login_button.disabled = false;
     });
 });

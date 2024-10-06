@@ -2,6 +2,7 @@ const login_button = document.getElementById('login_button');
 
 login_button.addEventListener('click', () => {
     login_button.disabled = true;
+    login_button.innerHTML = '<div class="spinner"></div>';
 
     const email_input = document.getElementById('email_input');
     const password_input = document.getElementById('password_input');
@@ -28,13 +29,15 @@ login_button.addEventListener('click', () => {
             localStorage.setItem('token', token);
 
             // use this token to authenticate requests
-            alert('SignUp successful!');
+            login_button.innerHTML = 'Login';
+            login_button.disabled = false;
             window.location.href = '/signin';
         });
     }).catch(error => {
         alert('Failed To SignUp!');
         email_input.value = '';
         password_input.value = '';
+        login_button.innerHTML = 'Login';
         login_button.disabled = false;
     });
 

@@ -243,6 +243,26 @@ header {
   text-decoration: underline;
 }
 
+.spinner {
+  display: inline-block;
+  width: 24px; /* Adjust size as needed */
+  height: 24px; /* Adjust size as needed */
+  border: 3px solid rgba(255, 255, 255, 0.3); /* Border color */
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+  border-top-color: #000000; /* Adjust the color of the spinning part */
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* For medium devices */
 @media screen and (min-width: 576px) 
