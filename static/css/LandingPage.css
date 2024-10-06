@@ -11,10 +11,9 @@ html, body {
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url("https://telegra.ph/file/b0583c176e4466147473a.png");
-    background-size:cover;
+    background-image: url("/static/img/BackGrounds/background2.png");
+    background-size: cover;
     background-position: center;
-    
 }
 
 header {
@@ -23,17 +22,20 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 30px 30px;
-  }
+}
 
-  .logo{
-    width: 10rem;
+.logo{
+    opacity: 0;
+    width: 5rem;
+    margin-left: 2rem;
+    position: relative; /* Allows z-index to be effective */
+    z-index: 1; /* Bring buttons above the overlay */
 }
 
 .GetHelp{
     border: 0;
     width: 8rem;
     height: 3.0rem;
-
     background-color: #FDC309;
     border-radius: 1.25rem;
     font-weight: bold;
@@ -41,38 +43,40 @@ header {
     color: #5E4400;
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
-  
-  
-  }
-  
-  /* Hover effect */
-  .GetHelp:hover {
-    background-color: wheat; /* Move the button up slightly on hover */
+    position: relative; /* Allows z-index to be effective */
+    z-index: 1; /* Bring buttons above the overlay */
+}
+
+/* Hover effect */
+.GetHelp:hover {
+    background-color: wheat;
     box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.3); /* Increase shadow size on hover */
-  }
-  
-  /* Active effect */
-  .GetHelp:active {
+}
+
+/* Active effect */
+.GetHelp:active {
     transform: translateY(3px); /* Move the button down slightly when clicked */
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* Decrease shadow size when clicked */
-  }
+}
 
-  nav button{
+nav button{
     border: none;
-    background-color: transparent;
+    background-color: #FDC309;
+    color: #5E4400;
     font-size: 1rem;
     margin: 20px;
     font-weight: bold;
-    color: white;
     padding: 7px 15px;
     border-radius: 50px;
     box-shadow: none;
+    position: relative; /* Allows z-index to be effective */
+    z-index: 1; /* Bring buttons above the overlay */
     transition: all 0.3s ease;
-  }
+}
 
-  nav button:hover{
+nav button:hover{
     border: none;
-    background-color:#FDC309;
+    background-color: wheat;
     font-size: 1.125rem;
     margin: 20px;
     font-weight: bold;
@@ -80,15 +84,15 @@ header {
     padding: 7px 15px;
     border-radius: 50px;
     box-shadow: none;
-  }
+}
 
-  section p {
+section p {
     font-family: "Freckle Face", system-ui;
     color: white;
     font-size: 10rem;
     text-align: center; 
     line-height: 0.8; 
-    margin-top: 6vh; 
+    margin-top: 14vh; 
     animation: slideInFromBottom 1.5s ease forwards;
 }
 
@@ -102,7 +106,6 @@ header {
         transform: translateY(0);
     }
 }
-
 
 @keyframes appearAnimation {
     from {
@@ -121,7 +124,7 @@ header {
     justify-content: center;
     align-items: center;
     margin: -100px;
-    animation: appearAnimation 1s forwards;
+    animation: slideInFromBottom 1.5s ease forwards;
 }
 
 .buttons button {
@@ -129,7 +132,7 @@ header {
     font-size: 1rem;
     width: 20rem;
     font-weight: bold;
-    color:#075d18;
+    color: #075d18;
     padding: 10px 20px;
     border: 5px;
     border-color: #00360b;
@@ -137,19 +140,43 @@ header {
     margin: 20px;
     cursor: pointer;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 1);
-
-
-    transition: background-color 0.75s ease;
+    transition: background-color 0.75s ease, transform 0.5s ease;
+    position: relative; /* Allows z-index to be effective */
+    z-index: 1; /* Bring buttons above the overlay */
 }
 
 .buttons button:hover {
     background-color: #075d18;
     color: #C7FF8F;
-    border-color:#C7FF8F;
+    border-color: #C7FF8F;
+    transform: translateY(-2px);
 }
 
 .buttons button:active {
     transform: translateY(-1px); /* Move button up slightly on hover for 3D effect */
 }
 
+/* Adding the continuous floating effect for the PNG background overlay */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Moves up slightly at the midpoint */
+    }
+}
 
+/* Apply the animation to the background PNG overlay */
+.background-overlay::before {
+    content: "";
+    position: absolute;
+    width: 100%; /* Adjust as needed */
+    height: 100%; /* Adjust as needed */
+    background-image: url('/static/img/BackGrounds/overlay.png'); /* Path to your PNG image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    animation: float 3s ease-in-out infinite; /* Continuous float animation */
+    z-index: 0; /* Set z-index for the overlay */
+}
