@@ -4,7 +4,7 @@
 
 html, body {
     width: 100vw;
-    height: 65vh;
+    height: 100vh;
     position: fixed;
     padding: 0;
     margin: 0;
@@ -12,7 +12,7 @@ html, body {
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url("https://telegra.ph/file/b0583c176e4466147473a.png");
+    background-image: url("/static/img/BackGrounds/background2.png");
     background-size:cover;
     background-position: center;
     
@@ -28,6 +28,7 @@ header {
 
   .logo{
     width: 10rem;
+    opacity: 0;
 }
 
 .GetHelp{
@@ -62,6 +63,17 @@ header {
     height: 15vw;
   }
 
+
+  @keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Moves up slightly at the midpoint */
+    }
+}
+
+
   .main-1 {
     display: flex;
     flex-wrap: wrap;
@@ -83,7 +95,14 @@ header {
     border: none;
     cursor:pointer;
     margin: 20px;
+    filter: drop-shadow(5px 5px 5px #222); 
+    transition: transform 0.4s ease, filter 0.4s ease;
 
+}
+
+.image-button:hover{
+  transform: translateY(-1rem);
+  filter: drop-shadow(5px 16px 16px #222); 
 }
 
 .image-text {
