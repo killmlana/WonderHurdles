@@ -6,7 +6,7 @@ html, body {
     height: 100vh;  /* Consider changing or removing if content needs more space */
     padding: 0;
     margin: 0;
-    background-image: url("https://telegra.ph/file/b0583c176e4466147473a.png");
+    background-image: url("/static/img/BackGrounds/background2.png");
     background-size: cover;
     background-position: center;
     overflow: auto;  /* Ensures scrollability */

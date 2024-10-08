@@ -132,6 +132,7 @@ header {
     align-items: center; /* Center vertically */
     background-color: #B54D2F;
     border: 10px solid rgb(114, 45, 7);
+    border-radius: 8px;
 }
 
 

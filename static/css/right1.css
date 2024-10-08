@@ -4,7 +4,7 @@
 
 html, body {
     width: 100vw;
-    height: 65vh;
+    height: 100vh;
     position: fixed;
     padding: 0;
     margin: 0;
@@ -12,7 +12,7 @@ html, body {
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url("https://telegra.ph/file/b0583c176e4466147473a.png");
+    background-image: url("/static/img/BackGrounds/background2.png");
     background-size:cover;
     background-position: center;
     
@@ -28,6 +28,7 @@ header {
 
   .logo{
     width: 10rem;
+    opacity: 0;
 }
 
 .GetHelp{
@@ -73,8 +74,7 @@ header {
   .base-canvas{
     position: absolute;
     z-index: -1;
-    height: 75vh;
-    width: 150vh;
+    height: 30em;
   }
 
   .Video-continue{
