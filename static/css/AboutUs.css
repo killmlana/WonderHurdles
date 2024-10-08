@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: "Nimbus Sans";
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
     background-color: #2e1a47; /* Dark purplish background */
@@ -20,11 +20,16 @@ header {
     text-align: start;
     color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    
 }
 
 header h1 {
     font-size: 2.5em;
-    margin: 0;
+}
+
+header h2 {
+    font-size: 2.5em;
+    text-align: end;
 }
 
 /* Main Content */
@@ -32,6 +37,42 @@ header h1 {
     padding: 20px 40px;
     padding-bottom: 20rem;
 }
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(-20px); /* Moves up slightly at the midpoint */
+    }
+}
+
+.astro {
+    height: 38vh;
+    transform: translate(-50%, -50%);
+    animation: float 3s ease-in-out infinite;
+}
+
+#mission {
+    display: flex;
+    flex-direction: column;
+}
+
+.mission-content {
+    display: flex;
+    align-items: flex-start; /* Aligns image and text at the top */
+}
+
+.astro {
+    height: 30vh; /* Adjust the height as needed */
+    margin-right: 20px; /* Space between the image and the text */
+}
+
+.mission-content p {
+    flex: 1; /* Ensures the text takes up the remaining space */
+    margin-right: 20px;
+}
+
 
 section {
     width:50%;
@@ -49,9 +90,9 @@ section {
 
 section h2 {
     font-size: 2rem;
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: end;
     margin-bottom: 10px;
+    margin-right: 1.5rem;
 }
 
 section p {
